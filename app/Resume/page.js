@@ -4,42 +4,41 @@ import Link from 'next/link';
 
 const Resume = () => {
   return (
-    <div className="font-sans bg-white text-gray-900 min-h-screen p-8">
+    
+    <div>
+      <Navbar/>
       {/* Header */}
+      <div className="font-sans bg-white text-gray-900 min-h-screen p-14">
       <header className="mb-12 animate-fadeIn">
-  <div className="flex justify-between items-center">
-    {/* Swastik Verma Name */}
-    <h1 className="text-4xl font-bold text-blue-800">
-      <Link href="/">Swastik Verma</Link>
-    </h1>
+        <div className="flex justify-between items-center">
+          {/* Swastik Verma Name */}
+          <h1 className="text-4xl font-bold text-blue-800">
+            <Link href="/">Swastik Verma</Link>
+          </h1>
 
-    {/* Download Resume Button with Downward Arrow */}
-    <a
-      href="/RESUME%20(1).pdf"  // Path to your resume in the public folder
-      download="Swastik_Verma_Resume.pdf"  // The name the file will be saved as
-      className="flex items-center justify-center gap-2 font-medium py-2 px-6 sm:py-3 sm:px-8 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300"
-    >
-      Download Resume
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-      </svg>
-    </a>
-  </div>
+          {/* Download Resume Button with Downward Arrow */}
+          <a
+            href="/RESUME%20(1).pdf"  // Path to your resume in the public folder
+            download="Swastik_Verma_Resume.pdf"  // The name the file will be saved as
+            className="flex items-center justify-center gap-2 font-medium py-2 px-6 sm:py-3 sm:px-8 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300"
+          >
+            Download Resume
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
 
-  <p className="text-lg text-gray-600 mt-4">Khanna, Punjab</p>
-  <p className="mt-2">
-    Email: <a href="mailto:swastik2740s@gmail.com" className="text-blue-600 hover:underline">swastik2740s@gmail.com</a> | Phone: +91-8725873505
-  </p>
-  <p className="mt-2">
-    <a href="https://www.linkedin.com/in/swastik-verma-153b30253/" className="text-blue-600 hover:underline">LinkedIn</a> |
-    <a href="https://github.com/Swastik2740S" className="text-blue-600 hover:underline"> GitHub</a> |
-    <a href="https://leetcode.com/u/swastik2740s/" className="text-blue-600 hover:underline"> LeetCode</a>
-  </p>
-</header>
-
-
-
-
+        <p className="text-lg text-gray-600 mt-4">Khanna, Punjab</p>
+        <p className="mt-2">
+          Email: <a href="mailto:swastik2740s@gmail.com" className="text-blue-600 hover:underline">swastik2740s@gmail.com</a> | Phone: +91-8725873505
+        </p>
+        <p className="mt-2">
+          <a href="https://www.linkedin.com/in/swastik-verma-153b30253/" className="text-blue-600 hover:underline">LinkedIn</a> |
+          <a href="https://github.com/Swastik2740S" className="text-blue-600 hover:underline"> GitHub</a> |
+          <a href="https://leetcode.com/u/swastik2740s/" className="text-blue-600 hover:underline"> LeetCode</a>
+        </p>
+      </header>
 
       {/* Main Content */}
       <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -132,6 +131,7 @@ const Resume = () => {
           </ul>
         </section>
       </main>
+    </div>
     </div>
   );
 };

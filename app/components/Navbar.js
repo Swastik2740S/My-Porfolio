@@ -18,21 +18,31 @@ const Navbar = () => {
         </a>
 
         {/* Navigation Links for Desktop */}
-        <ul className="hidden md:flex gap-5">
+        <ul className="hidden md:flex gap-5 rounded-lg">
           <Link href="/">
-            <li className="flex items-center gap-2 text-sm py-0.5 px-2 sm:py-2 sm:px-4 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300">Home</li>
+            <li className="flex items-center gap-2 text-sm py-0.5 px-2 sm:py-2 sm:px-4 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300 rounded-lg">
+              Home
+            </li>
           </Link>
-          <Link href="/about">
-            <li className="flex items-center gap-2 text-sm py-0.5 px-2 sm:py-2 sm:px-4 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300">About Me</li>
+          <Link href="/#about">
+            <li className="flex items-center gap-2 text-sm py-0.5 px-2 sm:py-2 sm:px-4 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300 rounded-lg">
+              About Me
+            </li>
           </Link>
-          <Link href="/projects">
-            <li className="flex items-center gap-2 text-sm py-0.5 px-2 sm:py-2 sm:px-4 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300">Projects</li>
+          <Link href="/#projects">
+            <li className="flex items-center gap-2 text-sm py-0.5 px-2 sm:py-2 sm:px-4 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300 rounded-lg">
+              Projects
+            </li>
           </Link>
-          <Link href='/Resume'>
-            <li className="flex items-center gap-2 text-sm py-0.5 px-2 sm:py-2 sm:px-4 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300">Resume</li>
+          <Link href="/Resume">
+            <li className="flex items-center gap-2 text-sm py-0.5 px-2 sm:py-2 sm:px-4 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300 rounded-lg">
+              Resume
+            </li>
           </Link>
-          <Link href="/contact">
-            <li className="flex items-center gap-2 text-sm py-0.5 px-2 sm:py-2 sm:px-4 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300">Contact Me</li>
+          <Link href="/#contact">
+            <li className="flex items-center gap-2 text-sm py-0.5 px-2 sm:py-2 sm:px-4 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300 rounded-lg">
+              Contact Me
+            </li>
           </Link>
         </ul>
 
@@ -46,14 +56,23 @@ const Navbar = () => {
 
       {/* Mobile Menu Links */}
       {isMobileMenuOpen && (
-        <ul className="md:hidden flex flex-col gap-6 p-4 bg-white shadow-lg">
-          <li className="font-medium py-2 border-b border-solid border-black hover:bg-gray-300">Home</li>
-          <li className="font-medium py-2 border-b border-solid border-black hover:bg-gray-300">About Me</li>
-          <li className="font-medium py-2 border-b border-solid border-black hover:bg-gray-300">Projects</li>
-          <Link href='/Resume'>
-            <li className="font-medium py-2 border-b border-solid border-black hover:bg-gray-300">Resume</li>
-          </Link>
-          <li className="font-medium py-2 border-b border-solid border-black hover:bg-gray-300">Contact Me</li>
+        <ul className="md:hidden flex flex-col gap-4 p-4 bg-white shadow-lg">
+          <li className="font-medium py-2 border-b border-solid border-black hover:bg-gray-300 hover:text-black">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="font-medium py-2 border-b border-solid border-black hover:bg-gray-300 hover:text-black">
+            <Link href="/#about">About Me</Link>
+          </li>
+          <li className="font-medium py-2 border-b border-solid border-black hover:bg-gray-300 hover:text-black">
+            <Link href="/#projects">Projects</Link>
+          </li>
+          <li className="font-medium py-2 border-b border-solid border-black hover:bg-gray-300 hover:text-black">
+            <Link href="/Resume">Resume</Link>
+          </li>
+          <li className="font-medium py-2 border-b border-solid border-black hover:bg-gray-300 hover:text-black">
+  <Link href="onamverma8@gmail.com">Contact Me</Link>
+</li>
+
         </ul>
       )}
     </nav>
