@@ -8,7 +8,7 @@ const Resume = () => {
     <div>
       <Navbar/>
       {/* Header */}
-      <div className="font-sans bg-white text-gray-900 min-h-screen p-14">
+      <div className="font-sans bg-white text-gray-900 min-h-screen p-8">
       <header className="mb-12 animate-fadeIn">
         <div className="flex justify-between items-center">
           {/* Swastik Verma Name */}
