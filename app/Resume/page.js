@@ -1,6 +1,9 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Link from 'next/link';
+import {  FaExternalLinkAlt } from 'react-icons/fa';
+import Image from 'next/image';
+import { FaLinkedin, FaGithub, FaCode, FaGraduationCap, FaTools, FaBriefcase, FaProjectDiagram, FaTrophy } from 'react-icons/fa';
 
 const Resume = () => {
   return (
@@ -9,11 +12,21 @@ const Resume = () => {
       <div className="font-sans bg-white text-gray-900 min-h-screen px-4 py-8">
         {/* Header */}
         <header className="max-w-4xl mx-auto mb-12 animate-fadeIn">
+          {/* Profile Photo (Optional) */}
+          {/* <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-blue-600 mb-6 mx-auto">
+            <Image
+              src="/images/profile.jpg"
+              alt="Swastik Verma"
+              width={128}
+              height={128}
+              className="object-cover w-full h-full"
+            />
+          </div> */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
             {/* Name and Title */}
             <div>
               <h1 className="text-4xl font-bold text-blue-800">
-                <Link href="/">Swastik Verma</Link>
+                <Link href="/" className="hover:underline">Swastik Verma</Link>
               </h1>
               <p className="text-lg text-gray-700 mt-2 font-medium">
                 Computer Science Undergraduate | Full-Stack & Blockchain Developer
@@ -25,7 +38,7 @@ const Resume = () => {
             <a
               href="/Swastik_Verma.pdf"
               download="Swastik_Verma_Resume.pdf"
-              className="flex items-center gap-2 font-medium py-2 px-6 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300 rounded-lg"
+              className="flex items-center justify-center gap-2 font-medium py-2 px-6 border border-solid border-black shadow-custom shadow-black hover:bg-gray-300 hover:text-black transition-all duration-300 rounded-lg"
             >
               Download Resume
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -38,15 +51,23 @@ const Resume = () => {
           <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:gap-4 text-base">
             <span>
               <span className="font-medium">Email:</span>{' '}
-              <a href="mailto:swastik2740s@gmail.com" className="text-blue-600 hover:underline">onamverma8@gmail.com</a>
+              <a href="mailto:onamverma8@gmail.com" className="text-blue-600 hover:underline">onamverma8@gmail.com</a>
             </span>
             <span>
               <span className="font-medium">Phone:</span> +91-8725873505
             </span>
-            <span>
-              <a href="https://www.linkedin.com/in/swastik-verma-153b30253/" className="text-blue-600 hover:underline ml-0 sm:ml-2">LinkedIn</a> |{' '}
-              <a href="https://github.com/Swastik2740S" className="text-blue-600 hover:underline">GitHub</a> |{' '}
-              <a href="https://leetcode.com/u/swastik2740s/" className="text-blue-600 hover:underline">LeetCode</a>
+            <span className="flex flex-wrap items-center gap-2">
+              <a href="https://www.linkedin.com/in/swastik-verma-153b30253/" className="text-blue-600 hover:underline flex items-center gap-1">
+                <FaLinkedin /> LinkedIn
+              </a>
+              <span>|</span>
+              <a href="https://github.com/Swastik2740S" className="text-blue-600 hover:underline flex items-center gap-1">
+                <FaGithub /> GitHub
+              </a>
+              <span>|</span>
+              <a href="https://leetcode.com/u/swastik2740s/" className="text-blue-600 hover:underline flex items-center gap-1">
+                <FaCode /> LeetCode
+              </a>
             </span>
           </div>
         </header>
@@ -54,7 +75,10 @@ const Resume = () => {
         {/* Main Content */}
         <main className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Education */}
-          <section className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300">
+          <section className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+            {/* <h2 className="text-xl font-semibold text-blue-800 mb-4 flex items-center gap-2">
+              <FaGraduationCap /> Education
+            </h2> */}
             <h2 className="text-xl font-semibold text-blue-800 mb-4">Education</h2>
             <ul className="space-y-3">
               <li>
@@ -73,7 +97,10 @@ const Resume = () => {
           </section>
 
           {/* Skills */}
-          <section className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300">
+          <section className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+            {/* <h2 className="text-xl font-semibold text-blue-800 mb-4 flex items-center gap-2">
+              <FaTools /> Skills
+            </h2> */}
             <h2 className="text-xl font-semibold text-blue-800 mb-4">Skills</h2>
             <ul className="space-y-2">
               <li><strong>Languages:</strong> JavaScript, Java, Python, Solidity</li>
@@ -86,7 +113,10 @@ const Resume = () => {
           </section>
 
           {/* Experience & Leadership */}
-          <section className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300">
+          <section className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+            {/* <h2 className="text-xl font-semibold text-blue-800 mb-4 flex items-center gap-2">
+              <FaBriefcase /> Experience & Leadership
+            </h2> */}
             <h2 className="text-xl font-semibold text-blue-800 mb-4">Experience & Leadership</h2>
             <div>
               <h3 className="font-semibold text-gray-700">Hackathons</h3>
@@ -107,17 +137,25 @@ const Resume = () => {
           </section>
 
           {/* Projects */}
-          <section className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 lg:col-span-2">
+          <section className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300 lg:col-span-2">
+            {/* <h2 className="text-xl font-semibold text-blue-800 mb-4 flex items-center gap-2">
+              <FaProjectDiagram /> Projects
+            </h2> */}
             <h2 className="text-xl font-semibold text-blue-800 mb-4">Projects</h2>
             <ul className="space-y-4">
               <li>
-                <strong>Green Credit Marketplace</strong> <span className="text-xs text-green-700">(National Winner)</span>
+                <strong>Green Credit Marketplace</strong> <span className="ml-2 bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded-full">Winner</span>
                 <br />
                 <span className="text-sm">
                   Web3-based platform for trading carbon credits on Ethereum (MERN, Solidity, Web3.js, MetaMask).
                 </span>
                 <br />
-                <a href="https://github.com/Swastik2740S" className="text-blue-600 hover:underline">GitHub</a>
+                <a href="https://github.com/Swastik2740S" className="text-blue-600 hover:underline flex items-center gap-1">
+                  <FaGithub /> GitHub
+                </a>
+                <a href="https://github.com/Swastik2740S" className="text-blue-600 hover:underline flex items-center gap-1">
+                   <FaExternalLinkAlt /> Live Demo
+                </a>
               </li>
               <li>
                 <strong>Grab The Work</strong>
@@ -126,7 +164,9 @@ const Resume = () => {
                   Freelancing platform with project posting, bidding, and real-time chat (React, Node.js, Socket.IO).
                 </span>
                 <br />
-                <a href="https://github.com/Swastik2740S/GRAB_THE_WORK" className="text-blue-600 hover:underline">GitHub</a>
+                <a href="https://github.com/Swastik2740S/GRAB_THE_WORK" className="text-blue-600 hover:underline flex items-center gap-1">
+                  <FaGithub /> GitHub
+                </a>
               </li>
               <li>
                 <strong>Hand Gesture Recognition</strong>
@@ -135,7 +175,9 @@ const Resume = () => {
                   Hand gesture detection using MediaPipe for sign and finger recognition.
                 </span>
                 <br />
-                <a href="https://github.com/Swastik2740S/Hand_guesture_recoginition/tree/main" className="text-blue-600 hover:underline">GitHub</a>
+                <a href="https://github.com/Swastik2740S/Hand_guesture_recoginition/tree/main" className="text-blue-600 hover:underline flex items-center gap-1">
+                  <FaGithub /> GitHub
+                </a>
               </li>
               <li>
                 <strong>Portfolio Website</strong>
@@ -144,20 +186,27 @@ const Resume = () => {
                   Built and deployed with Next.js, featuring responsive design and project showcases.
                 </span>
                 <br />
-                <a href="https://github.com/Swastik2740S/portfolio" className="text-blue-600 hover:underline">GitHub</a>
+                <a href="https://github.com/Swastik2740S/portfolio" className="text-blue-600 hover:underline flex items-center gap-1">
+                  <FaGithub /> GitHub
+                </a>
               </li>
             </ul>
           </section>
 
           {/* Achievements */}
-          <section className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300">
+          <section className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+            {/* <h2 className="text-xl font-semibold text-blue-800 mb-4 flex items-center gap-2">
+              <FaTrophy /> Achievements
+            </h2> */}
             <h2 className="text-xl font-semibold text-blue-800 mb-4">Achievements</h2>
             <ul className="space-y-2">
               <li>
-                Team <strong>Supersquad</strong> won 1st place at HackIndia Ignite, representing Chitkara University
+                Team <strong>Supersquad</strong> won 1st place at HackIndia Ignite, representing Chitkara University <span className="ml-2 bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full">Winner</span>
               </li>
               <li>
-                <strong>LeetCode:</strong> 150+ DSA problems solved in Java (<a href="https://leetcode.com/u/swastik2740s/" className="text-blue-600 hover:underline">Profile</a>)
+                <strong>LeetCode:</strong> 150+ DSA problems solved in Java <a href="https://leetcode.com/u/swastik2740s/" className="text-blue-600 hover:underline flex items-center gap-1">
+                  <FaCode /> Profile
+                </a>
               </li>
               <li>
                 <strong>HackIndia Ignite 2024:</strong> 1st place among 2500+ teams (Blockchain track)
@@ -165,6 +214,11 @@ const Resume = () => {
             </ul>
           </section>
         </main>
+
+        {/* Back to Home */}
+        <div className="mt-8 text-center">
+          <Link href="/" className="text-blue-600 hover:underline">Back to Home</Link>
+        </div>
       </div>
     </div>
   );

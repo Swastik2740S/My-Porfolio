@@ -14,6 +14,8 @@ import {
 } from 'react-icons/si';
 import { Typewriter } from 'react-simple-typewriter';
 import { SiLinux } from 'react-icons/si';
+import {  FaExternalLinkAlt } from 'react-icons/fa';
+
 
 
 const projects = [
@@ -22,7 +24,9 @@ const projects = [
     description: "Web3 platform for trading carbon credits on Ethereum. Built with MERN stack, Solidity, Web3.js, and MetaMask integration.",
     image: "/images/green1.png",
     github: "https://github.com/Swastik2740S",
+    live: "https://green-credit-marketplace.vercel.app" // Replace with your actual live URL
   },
+
   {
     name: "Grab The Work",
     description: "Freelancing platform with project posting, bidding, and real-time chat. Powered by React, Node.js, MongoDB, and Socket.IO.",
@@ -46,6 +50,7 @@ const projects = [
     description: "Blockchain-based solution for secure, tamper-proof data storage in space exploration.",
     image: "/images/space1.png",
     github: "https://github.com/khushsharma509/Immutable-Data-Integrity-Solutions-for-Space-Exploration",
+     live: "https://immutable-data-integrity-solutions-for-space-exploration.vercel.app/" 
   },
   {
     name: "Hand Gesture Recognition",
@@ -149,7 +154,7 @@ export default function Home() {
             <ul className="mt-4 space-y-4 text-lg text-gray-700">
               <li className="flex items-center gap-2 group relative">
                 <FaReact className="text-cyan-500" /> React.js
-                
+
               </li>
               <li className="flex items-center gap-2"><SiNextdotjs className="text-gray-800" /> Next.js</li>
               <li className="flex items-center gap-2"><SiTailwindcss className="text-teal-400" /> Tailwind CSS</li>
@@ -197,51 +202,64 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 sm:px-16 bg-white text-center" data-aos="fade-up">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800">My Projects</h2>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="project-card flex flex-col bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 group"
-              data-aos="zoom-in-up"
-            >
-              <div className="relative w-full h-64 overflow-hidden rounded-lg">
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  width={350}
-                  height={250}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <h3 className="mt-4 text-xl font-semibold text-gray-800 flex items-center gap-2 justify-center">
-                {project.name === "Green Credit Marketplace" && <FaCode />}
-                {project.name === "Grab The Work" && <FaTasks />}
-                {project.name === "Employee Management System (EMS)" && <FaUsers />}
-                {project.name === "SmartTask" && <FaLock />}
-                {project.name === "Immutable Data Integrity Solutions for Space Exploration" && <FaSpaceShuttle />}
-                {project.name === "Hand Gesture Recognition" && <FaHandPointer />}
-                {project.name}
-              </h3>
-              <div className="flex-1 min-h-[100px] mt-2 text-lg text-gray-700">
-                {project.description}
-              </div>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline mt-4 flex items-center gap-2 justify-center"
-              >
-                <FaGithub /> GitHub
-              </a>
-            </div>
-          ))}
+     <section id="projects" className="py-20 px-6 sm:px-16 bg-white text-center" data-aos="fade-up">
+  <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800">My Projects</h2>
+  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+    {projects.map((project, index) => (
+      <div
+        key={index}
+        className="project-card flex flex-col bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 group"
+        data-aos="zoom-in-up"
+      >
+        <div className="relative w-full h-64 overflow-hidden rounded-lg">
+          <Image
+            src={project.image}
+            alt={project.name}
+            width={350}
+            height={250}
+            className="object-cover w-full h-full"
+          />
         </div>
-      </section>
+        <h3 className="mt-4 text-xl font-semibold text-gray-800 flex items-center gap-2 justify-center">
+          {project.name === "Green Credit Marketplace" && <FaCode />}
+          {project.name === "Grab The Work" && <FaTasks />}
+          {project.name === "Employee Management System (EMS)" && <FaUsers />}
+          {project.name === "SmartTask" && <FaLock />}
+          {project.name === "Immutable Data Integrity Solutions for Space Exploration" && <FaSpaceShuttle />}
+          {project.name === "Hand Gesture Recognition" && <FaHandPointer />}
+          {project.name}
+        </h3>
+        <div className="flex-1 min-h-[100px] mt-2 text-lg text-gray-700">
+          {project.description}
+        </div>
+        <div className="mt-4 flex flex-col gap-2">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline flex items-center gap-2 justify-center"
+          >
+            <FaGithub /> GitHub
+          </a>
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline flex items-center gap-2 justify-center"
+            >
+              <FaExternalLinkAlt /> Live Demo
+            </a>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* Achievements Section */}
- {/* Achievements Section */}
+      {/* Achievements Section */}
       <section id="achievements" className="py-20 px-6 sm:px-16 bg-gray-50 text-center" data-aos="fade-up">
         <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800">Achievements</h2>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -260,7 +278,7 @@ export default function Home() {
               </h3>
               <p className="mt-2 text-lg text-gray-700">Led the team to 1st place in a national blockchain hackathon among 2800+ teams.</p>
               <div className="mt-4 flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
-                
+
               </div>
             </div>
           </a>
@@ -280,7 +298,7 @@ export default function Home() {
               </h3>
               <p className="mt-2 text-lg text-gray-700">Top 3 in regional, Top 10 nationally for scalable backend and IPFS integration.</p>
               <div className="mt-4 flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
-                
+
               </div>
             </div>
           </a>
@@ -300,7 +318,7 @@ export default function Home() {
               </h3>
               <p className="mt-2 text-lg text-gray-700">Solved 150+ data structures and algorithms problems in Java.</p>
               <div className="mt-4 flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
-                
+
               </div>
             </div>
           </a>
